@@ -30,20 +30,3 @@ if __name__ == "__main__":
 ```
 
 If you take your time and read the code, I am sure you can figure out how it works. That is just a simple program, but we can go really advanced.
-
-But first, let's go into actually creating a state machine from the beginning. To a create a new state machine instance, simply create an instance of ``StateMachine``. For this example, we are going to be using a padlock example, with there being two states, ``LOCKED``, and ``UNLOCKED``.
-
-```py
-from pystatemachine import State, StateMachine
-
-padlock = StateMachine("LOCKED") # "LOCKED" is the initial state for the StateMachine to be in.
-```
-You may notice a parameter for ``StateMachine``, "LOCKED". This is the ``initial_state`` parameter, it is a default state for the ``StateMachine`` to be in upon creation. Without this parameter, the ``StateMachine`` will be in no state at all, and will raise an error.
-
-```diff
-Traceback (most recent call last):
-  File "main.py", line 3, in <module>
-    padlock = StateMachine()
-TypeError: __init__() missing 1 required positional argument: 'initial_state'
-```
-So with that, we can add some states. You know how we created an initial state, ``LOCKED``? Well, we didn't actually *create* that state, we just made a pointer for it. An identifier, so the StateMachine knows where to start. We still have to declare it as a state though.
