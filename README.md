@@ -1,5 +1,5 @@
 # py-statemachine
-A module for creating simple yet effective state machines, with transitions that include logic, and creating transitions is as easy as decorating a function.
+A module for creating simple yet effective object-oriented state machines, with transitions that include logic, and creating transitions is as easy as decorating a function.
 
 
 Example of a "padlock" program:
