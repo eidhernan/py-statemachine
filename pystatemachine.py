@@ -3,7 +3,10 @@ class StateMachine:
     def __init__(self, initial_state = "DEFAULT"):
         self.state = initial_state
         self.states = {}
-
+        
+    def __repr__(self):
+        return repr(self.state)
+    
     def __call__(self, transition):
         """The __call__() method is a trigger for state transitions."""
         new = self.states[self.state].transitions[transition]() # Execute the transition, storing the return state value.
